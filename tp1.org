@@ -1,0 +1,410 @@
+#+TITLE: TP1 - Estructuras de Datos Avanzadas y Análisis Amortizado
+#+SUBTITLE: Diseño de Algoritmos
+#+AUTHOR: Marisol
+#+DATE: 2025
+#+OPTIONS: toc:2 num:t
+#+LANGUAGE: es
+
+* Datos del trabajo
+
+- *Materia:* Diseño de Algoritmos
+- *Trabajo práctico:* TP1
+- *Tema:* Estructuras de Datos Avanzadas y Análisis Amortizado
+  
+* Ejercicio I-1: Montículo Binomial
+
+** A) Diseño UML de clases
+
+#+begin_quote
+Dibujar el diagrama UML de clases para implementar un montículo binomial dinámico.
+#+end_quote
+
+El diseño debe incluir las siguientes clases principales:
+
+- =NodoBinomial=
+- =ArbolBinomial=
+- =HeapBinomial=
+
+- [ ] Definir las clases principales.
+- [ ] Identificar los atributos y métodos.
+
+
+
+*** Diagrama UML
+
+#+begin_src plantuml :file uml-monticulo-binomial.png
+@startuml
+
+class NodoBinomial {
+
+
+
+}
+
+class ArbolBinomial {
+  ' Completar atributos y métodos
+}
+
+class HeapBinomial {
+  ' Completar atributos y métodos
+}
+
+' Completar relaciones y multiplicidades
+
+@enduml
+#+end_src
+
+*** Decisiones de diseño
+
+- ¿Qué información almacena cada =NodoBinomial=?
+- ¿Cómo se representa la raíz de un árbol binomial?
+- ¿Cómo se enlazan los árboles binomiales dentro del heap?
+- ¿Qué atributo permite localizar rápidamente el mínimo?
+
+#+begin_src text
+Escribir aquí las decisiones de diseño.
+#+end_src
+
+** B) Algoritmos
+
+Desarrollar los algoritmos para las siguientes operaciones:
+
+- =insertar(x)=
+- =unir(H1,H2)=
+- =buscarMin()=
+- =extraerMin()=
+- =disminuirClave(x,k)=
+- =eliminar(x)=
+
+*** =insertar(x)=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de insertar(x).
+#+end_src
+
+*** =unir(H1,H2)=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de unir(H1,H2).
+#+end_src
+
+*** =buscarMin()=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de buscarMin().
+#+end_src
+
+*** =extraerMin()=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de extraerMin().
+#+end_src
+
+*** =disminuirClave(x,k)=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de disminuirClave(x,k).
+#+end_src
+
+*** =eliminar(x)=
+
+#+begin_src text
+Escribir aquí el pseudocódigo de eliminar(x).
+#+end_src
+
+** C) Análisis de eficiencia temporal
+
+Analizar la eficiencia temporal de cada operación en notación =O= y justificarla.
+
+| Operación             | Complejidad | Justificación |
+|-----------------------+-------------+---------------|
+| =insertar(x)=         |             |               |
+| =unir(H1,H2)=         |             |               |
+| =buscarMin()=         |             |               |
+| =extraerMin()=        |             |               |
+| =disminuirClave(x,k)= |             |               |
+| =eliminar(x)=         |             |               |
+
+#+begin_src text
+Escribir aquí la justificación detallada de las complejidades.
+#+end_src
+
+* Ejercicio I-2: Conjuntos Disjuntos
+
+** A) Implementación con arreglos
+
+Implementar en pseudocódigo o Java las operaciones sobre conjuntos disjuntos usando una representación en arreglos:
+
+- =buscar(x)= (=find=)
+- =fusionar(a,b)= (=union=)
+
+*** Representación utilizada
+
+#+begin_src text
+Explicar qué representa cada posición del arreglo y cómo se inicializan los conjuntos.
+#+end_src
+
+*** Implementación en pseudocódigo
+
+#+begin_src text
+Escribir aquí la implementación de buscar(x) y fusionar(a,b).
+#+end_src
+
+*** Implementación en Java
+
+#+begin_src java
+public class ConjuntosDisjuntos {
+
+    // Completar atributos.
+
+    public ConjuntosDisjuntos(int n) {
+        // Completar inicialización.
+    }
+
+    public int buscar(int x) {
+        // Completar implementación.
+        return 0;
+    }
+
+    public void fusionar(int a, int b) {
+        // Completar implementación.
+    }
+}
+#+end_src
+
+** B) Mejoras de eficiencia
+
+Explicar cómo cambia la eficiencia al aplicar las siguientes técnicas:
+
+*** Union by rank
+
+#+begin_quote
+Explicar cómo se decide qué raíz se convierte en hija de la otra y por qué esto evita que los árboles crezcan demasiado.
+#+end_quote
+
+#+begin_src text
+Escribir aquí la explicación de union by rank.
+#+end_src
+
+*** Path compression
+
+#+begin_quote
+Explicar cómo se modifican los enlaces durante la operación =buscar(x)= para acercar los nodos a la raíz.
+#+end_quote
+
+#+begin_src text
+Escribir aquí la explicación de path compression.
+#+end_src
+
+** C) Complejidad y justificación
+
+Calcular la complejidad de las operaciones en cada caso y justificar.
+
+| Variante | Complejidad de =buscar= | Complejidad de =fusionar= | Justificación |
+|----------+-------------------------+---------------------------+---------------|
+| Representación básica | | | |
+| Union by rank | | | |
+| Path compression | | | |
+| Union by rank + path compression | | | |
+
+#+begin_src text
+Escribir aquí el análisis completo. Indicar, si corresponde, la complejidad amortizada.
+#+end_src
+
+* Ejercicio I-3: Árbol TRIE - Diccionario de sinónimos
+
+** A) Diseño e implementación
+
+Diseñar e implementar en Java un algoritmo que permita:
+
+- [ ] Almacenar un diccionario de sinónimos en un TRIE.
+- [ ] Agregar un sinónimo a una palabra existente.
+- [ ] Mostrar todos los sinónimos de una palabra dada.
+- [ ] Listar todas las palabras del diccionario sin mostrar sus sinónimos.
+
+*** Estructura de datos
+
+Describir qué información contiene cada nodo del TRIE y cómo se representa la lista de sinónimos asociada a una palabra.
+
+#+begin_src text
+Escribir aquí la descripción de la estructura.
+#+end_src
+
+*** Implementación en Java
+
+#+begin_src java
+import java.util.*;
+
+public class TrieSinonimos {
+
+    private static class Nodo {
+        // Completar atributos del nodo.
+    }
+
+    private final Nodo raiz;
+
+    public TrieSinonimos() {
+        // Completar inicialización.
+        raiz = null;
+    }
+
+    public void insertarPalabra(String palabra) {
+        // Completar implementación.
+    }
+
+    public void agregarSinonimo(String palabra, String sinonimo) {
+        // Completar implementación.
+    }
+
+    public List<String> mostrarSinonimos(String palabra) {
+        // Completar implementación.
+        return new ArrayList<>();
+    }
+
+    public List<String> listarPalabras() {
+        // Completar implementación.
+        return new ArrayList<>();
+    }
+}
+#+end_src
+
+*** Ejemplo de uso
+
+#+begin_src java
+// Completar con un ejemplo de creación del diccionario,
+// inserción de palabras, carga de sinónimos y consultas.
+#+end_src
+
+** B) Análisis de eficiencia
+
+Analizar la eficiencia temporal de las operaciones =insertar=, =buscar= y =listar=.
+
+Sea =L= la longitud de la palabra y sea =N= la cantidad de palabras almacenadas en el diccionario.
+
+| Operación | Complejidad | Justificación |
+|-----------+-------------+---------------|
+| Insertar una palabra | | |
+| Buscar una palabra | | |
+| Agregar un sinónimo | | |
+| Mostrar sinónimos | | |
+| Listar todas las palabras | | |
+
+#+begin_src text
+Escribir aquí la justificación de cada complejidad.
+#+end_src
+
+* Ejercicio I-4: Análisis Amortizado
+
+** A) Contador binario extendido
+
+Demostrar que, si se incluye la operación de decrementar una unidad en el contador binario visto en clase, una secuencia de =n= operaciones costará a lo sumo:
+
+\[
+\Theta(n \cdot k)
+\]
+
+donde =k= es la cantidad de dígitos del número binario.
+
+*** Modelo del contador
+
+Describir cómo se representa el contador y cómo funcionan las operaciones =incrementar= y =decrementar=.
+
+#+begin_src text
+Escribir aquí el modelo del contador.
+#+end_src
+
+*** Costo de incrementar
+
+#+begin_src text
+Analizar cuántos bits pueden cambiar durante un incremento.
+#+end_src
+
+*** Costo de decrementar
+
+#+begin_src text
+Analizar cuántos bits pueden cambiar durante un decremento.
+#+end_src
+
+*** Demostración para una secuencia de n operaciones
+
+#+begin_src text
+Escribir aquí la demostración y explicar por qué el costo total está acotado por Θ(n·k).
+#+end_src
+
+** B) Secuencia de operaciones con costos especiales
+
+*** Enunciado
+
+Se realiza una secuencia de =n= operaciones sobre una estructura de datos dada. La operación =i=-ésima cuesta:
+
+- =costo(i) = i= si =i= es una potencia de 2.
+- =costo(i) = 1= en cualquier otro caso.
+
+*** Método agregado
+
+Usando el método agregado, calcular el costo amortizado de cada operación.
+
+#+begin_src text
+Escribir aquí el cálculo del costo total de la secuencia.
+#+end_src
+
+*** Costo total
+
+La suma de los costos puede expresarse como:
+
+\[
+T(n) = \sum_{i=1}^{n} costo(i)
+\]
+
+#+begin_src text
+Desarrollar y acotar la suma de los costos de las operaciones que son potencias de 2.
+#+end_src
+
+*** Costo amortizado por operación
+
+El costo amortizado promedio de una operación es:
+
+\[
+\widehat{c} = \frac{T(n)}{n}
+\]
+
+#+begin_src text
+Completar el cálculo y expresar el resultado asintótico.
+#+end_src
+
+* Conclusiones
+
+#+begin_src text
+Comparar las estructuras estudiadas y resumir qué técnica resulta más importante
+en cada caso.
+#+end_src
+
+* Bibliografía y fuentes
+
+- Material de la cátedra: TP1-1 - Análisis Amortizado - Diseño de Algoritmos, 2025.
+- Agregar aquí los libros, apuntes, artículos o páginas consultadas.
+
+* Control de entrega
+
+- [ ] Ejercicio I-1 completo.
+- [ ] Diagrama UML incluido.
+- [ ] Algoritmos del montículo binomial incluidos.
+- [ ] Complejidades justificadas.
+- [ ] Ejercicio I-2 completo.
+- [ ] Union by rank explicado.
+- [ ] Path compression explicado.
+- [ ] Complejidades justificadas.
+- [ ] Ejercicio I-3 completo.
+- [ ] Código Java revisado y compilado.
+- [ ] Complejidades del TRIE justificadas.
+- [ ] Ejercicio I-4 completo.
+- [ ] Demostraciones revisadas.
+- [ ] Conclusiones escritas.
+- [ ] Bibliografía agregada.
+- [ ] Archivo exportado al formato solicitado por la cátedra.
+
+* Notas
+
+#+begin_src text
+Escribir aquí dudas, observaciones o temas para consultar.
+#+end_src
