@@ -1,4 +1,4 @@
-package ArbolTrie;
+package Diccionario;
 
 /**
  * Programa de prueba para la clase ArbolTrie.

@@ -1,11 +1,12 @@
 
-public class ConjuntosDisjuntos{
+
+public class ConjuntosDisjuntosOptimizado{
 
     // padre[i] indica el padre del elemento i.
-    private final int[] padre;
+    private  int[] padre;
 
     // rango[i] se utiliza solamente cuando i es una raíz.
-    private final int[] rango;
+    private  int[] rango;
 
     /**
      * Crea n conjuntos disjuntos.
